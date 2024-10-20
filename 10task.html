@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 1.) Given an array of numbers, use the map() method to create a new array where each number is squared.
+        let arr = [1,2,3,4,5]
+        let sqrd_numbers = arr.map(arr =>{
+           return arr * arr
+        });
+        console.log(sqrd_numbers)     
+    // op :  [1, 4, 9, 16, 25]
+
+// 2.)You have an array of strings representing names. Use map() to transform each name to uppercase.
+  let names = ["dontharaboina","jayakrishna","mudhiraj"]
+  let upr_case = names.map((ele,ind,arr)=>{
+    return ele.toUpperCase()
+  })
+  console.log(upr_case);
+//   op :  ['DONTHARABOINA', 'JAYAKRISHNA', 'MUDHIRAJ']
+
+// 3.)Given an array of objects representing products, use filter() to return an array of their price which are greater than 500
+  let products = [
+  { name: "Laptop", price: 1000 },
+  { name: "Phone", price: 500 },
+  { name: "Tablet", price: 700 }
+  ];
+  let new_products = products.filter((e,i,a)=>{
+        return e.price>500
+  })
+  console.log(new_products)
+
+// op :[ {name: 'Laptop', price: 1000}, {name: 'Tablet', price: 700}]
+    </script>
+</body>
+</html>
